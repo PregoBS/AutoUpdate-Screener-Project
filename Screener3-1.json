@@ -1,0 +1,116 @@
+[
+    {
+        "Close": 37.11,
+        "DstLvl": 1,
+        "Signal": 63.98,
+        "Symbol": "EWZ.NYSE"
+    },
+    {
+        "Close": 2238.11,
+        "DstLvl": 2,
+        "Signal": 88.8,
+        "Symbol": "US2000"
+    },
+    {
+        "Close": 4439.7,
+        "DstLvl": 1,
+        "Signal": 67.78,
+        "Symbol": "US500"
+    },
+    {
+        "Close": 57.2,
+        "DstLvl": 2,
+        "Signal": 87.84,
+        "Symbol": "XOM.NYSE"
+    },
+    {
+        "Close": 147.035,
+        "DstLvl": 1,
+        "Signal": 66.51,
+        "Symbol": "AAPL.NAS"
+    },
+    {
+        "Close": 231.25,
+        "DstLvl": 3,
+        "Signal": 96.1,
+        "Symbol": "V.NYSE"
+    },
+    {
+        "Close": 273.78,
+        "DstLvl": 1,
+        "Signal": 65.05,
+        "Symbol": "PYPL.NAS"
+    },
+    {
+        "Close": 359.47,
+        "DstLvl": 1,
+        "Signal": 67.02,
+        "Symbol": "MA.NYSE"
+    },
+    {
+        "Close": 53.31,
+        "DstLvl": 1,
+        "Signal": 70.82,
+        "Symbol": "INTC.NAS"
+    },
+    {
+        "Close": 106.346,
+        "DstLvl": 2,
+        "Signal": 85.11,
+        "Symbol": "DUK.NYSE"
+    },
+    {
+        "Close": 149.31,
+        "DstLvl": 1,
+        "Signal": 65.75,
+        "Symbol": "WMT.NYSE"
+    },
+    {
+        "Close": 37.888,
+        "DstLvl": 1,
+        "Signal": 67.33,
+        "Symbol": "FCX.NYSE"
+    },
+    {
+        "Close": 145.06,
+        "DstLvl": 1,
+        "Signal": 68.44,
+        "Symbol": "TMUS.NAS"
+    },
+    {
+        "Close": 231.5,
+        "DstLvl": 1,
+        "Signal": 66.82,
+        "Symbol": "HON.NYSE"
+    },
+    {
+        "Close": 385.491,
+        "DstLvl": 1,
+        "Signal": 65.15,
+        "Symbol": "DE.NYSE"
+    },
+    {
+        "Close": 314.112,
+        "DstLvl": 1,
+        "Signal": 60.89,
+        "Symbol": "PSA.NYSE"
+    },
+    {
+        "Close": 114.75,
+        "DstLvl": 1,
+        "Signal": 65.5,
+        "Symbol": "ABBV.NYSE"
+    },
+    {
+        "Close": 170.18,
+        "DstLvl": 1,
+        "Signal": 63.88,
+        "Symbol": "NKE.NYSE"
+    },
+    {
+        "Close": 115.69,
+        "DstLvl": 1,
+        "Signal": 67.53,
+        "Symbol": "SBUX.NAS"
+    }
+]

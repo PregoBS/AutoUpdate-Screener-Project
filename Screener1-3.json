@@ -1,0 +1,52 @@
+[
+    {
+        "Close": 1.38369,
+        "Signal": 1,
+        "Symbol": "GBPUSD"
+    },
+    {
+        "Close": 1.17247,
+        "Signal": 1,
+        "Symbol": "EURUSD"
+    },
+    {
+        "Close": 2238.21,
+        "Signal": 1,
+        "Symbol": "US2000"
+    },
+    {
+        "Close": 1746.95,
+        "Signal": 1,
+        "Symbol": "XAUUSD"
+    },
+    {
+        "Close": 627.101,
+        "Signal": -1,
+        "Symbol": "ADBE.NAS"
+    },
+    {
+        "Close": 149.32,
+        "Signal": 1,
+        "Symbol": "WMT.NYSE"
+    },
+    {
+        "Close": 99.78,
+        "Signal": 1,
+        "Symbol": "PM.NYSE"
+    },
+    {
+        "Close": 58.767,
+        "Signal": 1,
+        "Symbol": "NEM.NYSE"
+    },
+    {
+        "Close": 231.45,
+        "Signal": 1,
+        "Symbol": "HON.NYSE"
+    },
+    {
+        "Close": 46.81,
+        "Signal": 1,
+        "Symbol": "PFE.NYSE"
+    }
+]

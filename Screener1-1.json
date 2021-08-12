@@ -1,0 +1,62 @@
+[
+    {
+        "Close": 161.58,
+        "Signal": 1,
+        "Symbol": "JPM.NYSE"
+    },
+    {
+        "Close": 103.91,
+        "Signal": 1,
+        "Symbol": "MS.NYSE"
+    },
+    {
+        "Close": 82.56,
+        "Signal": -1,
+        "Symbol": "NEE.NYSE"
+    },
+    {
+        "Close": 106.346,
+        "Signal": -1,
+        "Symbol": "DUK.NYSE"
+    },
+    {
+        "Close": 48.023,
+        "Signal": -1,
+        "Symbol": "EXC.NAS"
+    },
+    {
+        "Close": 155.0,
+        "Signal": -1,
+        "Symbol": "PEP.NAS"
+    },
+    {
+        "Close": 99.76,
+        "Signal": -1,
+        "Symbol": "PM.NYSE"
+    },
+    {
+        "Close": 58.805,
+        "Signal": -1,
+        "Symbol": "NEM.NYSE"
+    },
+    {
+        "Close": 192.82,
+        "Signal": 1,
+        "Symbol": "UPS.NYSE"
+    },
+    {
+        "Close": 226.11,
+        "Signal": 1,
+        "Symbol": "UNP.NYSE"
+    },
+    {
+        "Close": 201.46,
+        "Signal": 1,
+        "Symbol": "MMM.NYSE"
+    },
+    {
+        "Close": 705.58,
+        "Signal": -1,
+        "Symbol": "TSLA.NAS"
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "Close": 219.394,
+        "Signal": -1,
+        "Symbol": "ECL.NYSE"
+    },
+    {
+        "Close": 226.11,
+        "Signal": 1,
+        "Symbol": "UNP.NYSE"
+    }
+]

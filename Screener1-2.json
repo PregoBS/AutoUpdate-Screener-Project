@@ -1,0 +1,52 @@
+[
+    {
+        "Close": 3103.3,
+        "Signal": -1,
+        "Symbol": "ETHUSD"
+    },
+    {
+        "Close": 102.4,
+        "Signal": 1,
+        "Symbol": "CVX.NYSE"
+    },
+    {
+        "Close": 74.024,
+        "Signal": 1,
+        "Symbol": "C.NYSE"
+    },
+    {
+        "Close": 413.79,
+        "Signal": 1,
+        "Symbol": "GS.NYSE"
+    },
+    {
+        "Close": 243.15,
+        "Signal": -1,
+        "Symbol": "CRM.NYSE"
+    },
+    {
+        "Close": 58.791,
+        "Signal": 1,
+        "Symbol": "NEM.NYSE"
+    },
+    {
+        "Close": 231.51,
+        "Signal": 1,
+        "Symbol": "HON.NYSE"
+    },
+    {
+        "Close": 238.455,
+        "Signal": 1,
+        "Symbol": "BA.NYSE"
+    },
+    {
+        "Close": 129.107,
+        "Signal": -1,
+        "Symbol": "PLD.NYSE"
+    },
+    {
+        "Close": 122.022,
+        "Signal": -1,
+        "Symbol": "ABT.NYSE"
+    }
+]
