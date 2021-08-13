@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: invisible;
+}
+
+body {
+    margin: 15px;
+    width: 100%;
+    font-family: 'verdana';
+    text-align: center;
+    font-size: 14px;
+    background-color: #D9D9D9;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    height: 15px;
+    line-height: 30px;
+}
+
+table {
+    text-transform: uppercase;
+    border-collapse: collapse;
+    font-family: 'verdana';
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+}
+
+td {
+    height: 25px;
+    border: 1px solid dimgrey;
+    border-bottom: 2px solid dimgrey;
+    text-align: center;
+}
+
+th {
+    color: white;
+    height: 40px;
+    font-size: 14px;
+    background-color: mediumspringgreen;
+    border: 2px solid black;
+}
+
+tr:hover {
+    background-color: wheat;
+}
+
+.bloco {
+    margin: 8px;
+    height: 805px;
+    width: 1020px;
+    background-color: #D2D2D2;
+    border-radius: 20px;
+}
+
+.bloco_table {
+    margin: 20px;
+    float: left;
+}
+
+.screener {
+    width: 300px;
+    float: left;
+}
+
+.dstlvl1 {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.dstlvl2 {
+    background-color: orange;
+    font-weight: bold;
+}
+
+.dstlvl3 {
+    background-color: red;
+    font-weight: bold;
+}
+
+.dstlvl4 {
+    background-color: maroon;
+    color: white;
+    font-weight: bold;
+}
