@@ -52,9 +52,9 @@ function init() {
             file2 = "Screener2-" + num.toString();
             file3 = "Screener3-" + num.toString();
 
-            var name1 = actual_JSON[0][file1];
-            var name2 = actual_JSON[0][file2];
-            var name3 = actual_JSON[0][file3];
+            var name1 = actual_JSON[file1];
+            var name2 = actual_JSON[file2];
+            var name3 = actual_JSON[file3];
         });
 
         loadJSON(name1, function(response) {
