@@ -39,7 +39,7 @@ function init() {
     let file1 = "";
     let file2 = "";
     let file3 = "";
-    var urls-file = "";
+    var urls-file = "json-urls.json";
 
     for (i=0; i<3; i++) {
         let num = i+1;
