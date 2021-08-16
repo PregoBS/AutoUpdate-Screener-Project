@@ -56,17 +56,6 @@ function init() {
 	let file1 = "";
     let file2 = "";
     let file3 = "";
-<<<<<<< HEAD
-=======
-    var urls-file = "json-urls.json";
-
-    for (i=0; i<3; i++) {
-        let num = i+1;
-
-        loadJSON(urls-file, function(response) {
-            // Parse JSON string into object
-            var actual_JSON = JSON.parse(response);
->>>>>>> 546080ee2466489b2d95306a607eed69ba071e1c
 
 	const url_file = "json_urls.json";
 	
@@ -119,7 +108,7 @@ function init() {
 				renderHTML(actual_JSON, dst_result_id, dstContainer);
 			});
 		}
-	});     
+	});
 }
 
 init();
