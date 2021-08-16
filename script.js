@@ -22,7 +22,21 @@ function renderHTML(data, result_id, container) {
     container.insertAdjacentHTML('beforeend', htmlString);
 }
 
-function loadJSON(file, callback) {
+function loadJSON_urls(file, callback) {
+    var api_url = "https://api.jsonbin.io/v3/b/" + file + "/latest";
+	var xobj = new XMLHttpRequest();
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(xobj.responseText);
+          }
+    };
+	xobj.open('GET', api_url, true);
+	xobj.setRequestHeader("X-Master-Key", "$2b$10$VsXeSKxa0PUDIDYikUuvd.iKAwzGx4E/NrNAoPusl5smUUuQOjjFe");
+    xobj.send();
+}
+
+function loadJSON_file(file, callback) {
     var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
     xobj.open('GET', file, true);
@@ -36,60 +50,65 @@ function loadJSON(file, callback) {
 }
 
 function init() {
-    let file1 = "";
+    let name1 = "";
+    let name2 = "";
+    let name3 = "";
+	let file1 = "";
     let file2 = "";
     let file3 = "";
-    var urls-file = "";
 
-    for (i=0; i<3; i++) {
-        let num = i+1;
+	const url_file = "json_urls.json";
+	
+	loadJSON_file(url_file, function(response) {
+		// Parse JSON string into object
+		var actual_JSON = JSON.parse(response);
+		
+		for (i=0; i<3; i++) {
+			let num = i+1;
+			
+			var json_file = actual_JSON[0];
+			
+			file1 = "Screener1a" + num.toString();
+			file2 = "Screener2a" + num.toString();
+			file3 = "Screener3a" + num.toString();
+			name1 = json_file[file1];
+			name2 = json_file[file2];
+			name3 = json_file[file3];
+			
+			loadJSON_urls(name1, function(response) {
+				// Parse JSON string into object
+				var actual_JSON = JSON.parse(response);
+				var fibo_result_id = "fibo_result" + num.toString();
+				var fibo_id = "fibo" + num.toString();
+				var fiboContainer = document.getElementById(fibo_id);
 
-        loadJSON(urls-file, function(response) {
-            // Parse JSON string into object
-            var actual_JSON = JSON.parse(response);
+				removeOldHTML(fibo_result_id);
+				renderHTML(actual_JSON, fibo_result_id, fiboContainer);
+			});
 
-            file1 = "Screener1-" + num.toString();
-            file2 = "Screener2-" + num.toString();
-            file3 = "Screener3-" + num.toString();
+			loadJSON_urls(name2, function(response) {
+				// Parse JSON string into object
+				var actual_JSON = JSON.parse(response);
+				var rm_result_id = "rm_result" + num.toString();
+				var rm_id = "rm" + num.toString();
+				var rmContainer = document.getElementById(rm_id);
 
-            var name1 = actual_JSON[file1];
-            var name2 = actual_JSON[file2];
-            var name3 = actual_JSON[file3];
-        });
+				removeOldHTML(rm_result_id);
+				renderHTML(actual_JSON, rm_result_id, rmContainer);
+			});
 
-        loadJSON(name1, function(response) {
-            // Parse JSON string into object
-            var actual_JSON = JSON.parse(response);
-            var fibo_result_id = "fibo_result" + num.toString();
-            var fibo_id = "fibo" + num.toString();
-            var fiboContainer = document.getElementById(fibo_id);
+			loadJSON_urls(name3, function(response) {
+				// Parse JSON string into object
+				var actual_JSON = JSON.parse(response);
+				var dst_result_id = "dst_result" + num.toString();
+				var dst_id = "dst" + num.toString();
+				var dstContainer = document.getElementById(dst_id);
 
-            removeOldHTML(fibo_result_id);
-            renderHTML(actual_JSON, fibo_result_id, fiboContainer);
-        });
-
-        loadJSON(name2, function(response) {
-            // Parse JSON string into object
-            var actual_JSON = JSON.parse(response);
-            var rm_result_id = "rm_result" + num.toString();
-            var rm_id = "rm" + num.toString();
-            var rmContainer = document.getElementById(rm_id);
-
-            removeOldHTML(rm_result_id);
-            renderHTML(actual_JSON, rm_result_id, rmContainer);
-        });
-
-        loadJSON(name3, function(response) {
-            // Parse JSON string into object
-            var actual_JSON = JSON.parse(response);
-            var dst_result_id = "dst_result" + num.toString();
-            var dst_id = "dst" + num.toString();
-            var dstContainer = document.getElementById(dst_id);
-
-            removeOldHTML(dst_result_id);
-            renderHTML(actual_JSON, dst_result_id, dstContainer);
-        });
-    }
+				removeOldHTML(dst_result_id);
+				renderHTML(actual_JSON, dst_result_id, dstContainer);
+			});
+		}
+	});     
 }
 
 init();
