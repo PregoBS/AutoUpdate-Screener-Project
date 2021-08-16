@@ -36,15 +36,26 @@ function loadJSON(file, callback) {
 }
 
 function init() {
-    let name1 = "";
-    let name2 = "";
-    let name3 = "";
+    let file1 = "";
+    let file2 = "";
+    let file3 = "";
+    var urls-file = "";
 
     for (i=0; i<3; i++) {
         let num = i+1;
-        name1 = "Screener1-" + num.toString() + ".json";
-        name2 = "Screener2-" + num.toString() + ".json";
-        name3 = "Screener3-" + num.toString() + ".json";
+
+        loadJSON(urls-file, function(response) {
+            // Parse JSON string into object
+            var actual_JSON = JSON.parse(response);
+
+            file1 = "Screener1-" + num.toString();
+            file2 = "Screener2-" + num.toString();
+            file3 = "Screener3-" + num.toString();
+
+            var name1 = actual_JSON[0][file1];
+            var name2 = actual_JSON[0][file2];
+            var name3 = actual_JSON[0][file3];
+        });
 
         loadJSON(name1, function(response) {
             // Parse JSON string into object
@@ -82,4 +93,4 @@ function init() {
 }
 
 init();
-setInterval(init, 15000);
+setInterval(init, 60000);
