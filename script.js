@@ -26,13 +26,14 @@ function loadJSON_urls(file, callback) {
     var api_url = "https://api.jsonbin.io/v3/b/" + file + "/latest";
 	var xobj = new XMLHttpRequest();
     xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
+          if (xobj.readyState == XMLHttpRequest.DONE) {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
             callback(xobj.responseText);
           }
     };
 	xobj.open('GET', api_url, true);
 	xobj.setRequestHeader("X-Master-Key", "$2b$10$VsXeSKxa0PUDIDYikUuvd.iKAwzGx4E/NrNAoPusl5smUUuQOjjFe");
+	xobj.setRequestHeader("X-Bin-Meta", false);
     xobj.send();
 }
 
