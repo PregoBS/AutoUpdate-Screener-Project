@@ -22,8 +22,8 @@ function renderHTML(data, result_id, container) {
     container.insertAdjacentHTML('beforeend', htmlString);
 }
 
-function loadJSON_urls(file, callback) {
-    var api_url = "https://api.jsonbin.io/v3/b/" + file + "/latest";
+function loadJSON_urls(file_id, callback) {
+    var api_url = "https://api.jsonstorage.net/v1/json/" + file_id;
 	var xobj = new XMLHttpRequest();
     xobj.onreadystatechange = function () {
           if (xobj.readyState == XMLHttpRequest.DONE) {
@@ -32,8 +32,7 @@ function loadJSON_urls(file, callback) {
           }
     };
 	xobj.open('GET', api_url, true);
-	xobj.setRequestHeader("X-Master-Key", "$2b$10$VsXeSKxa0PUDIDYikUuvd.iKAwzGx4E/NrNAoPusl5smUUuQOjjFe");
-	xobj.setRequestHeader("X-Bin-Meta", false);
+	xobj.setRequestHeader('Content-Type', 'application/json');
     xobj.send();
 }
 
@@ -58,7 +57,7 @@ function init() {
     let file2 = "";
     let file3 = "";
 
-	const url_file = "json_urls.json";
+	const url_file = "json_id.json";
 	
 	loadJSON_file(url_file, function(response) {
 		// Parse JSON string into object
