@@ -68,6 +68,21 @@ tr:hover {
     float: left;
 }
 
+.preto {
+    font-weight: bold;
+    color: black;
+}
+
+.vermelho {
+    font-weight: bold;
+    color: #B80000;
+}
+
+.verde {
+    font-weight: bold;
+    color: #159C00;
+}
+
 .dstlvl1 {
     background-color: yellow;
     font-weight: bold;

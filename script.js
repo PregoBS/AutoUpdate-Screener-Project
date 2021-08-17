@@ -10,12 +10,15 @@ function renderHTML(data, result_id, container) {
     var s_id = "";
 
     for (i=0; i<data.length; i++) {
+        var close_class = data[i].closeClass;
+        var symb_class = data[i].symbolClass;
+
         if (data[i].DstLvl != null) {
             s_id = "dstlvl" + data[i].DstLvl;
-            htmlString += "<tr><td>" + data[i].Symbol + "</td><td>" + data[i].Close + "</td><td class=" + s_id + ">" + data[i].Signal + "</td></tr>";
+            htmlString += "<tr><td class=" + symbolClass + ">" + data[i].Symbol + "</td><td class=" + closeClass + ">" + data[i].Close + "</td><td class=" + s_id + ">" + data[i].Signal + "</td></tr>";
         }
         else {
-            htmlString += "<tr><td>" + data[i].Symbol + "</td><td>" + data[i].Close + "</td><td>" + data[i].Signal + "</td></tr>";
+            htmlString += "<tr><td class=" + symbolClass + ">" + data[i].Symbol + "</td><td class=" + closeClass + ">" + data[i].Close + "</td><td>" + data[i].Signal + "</td></tr>";
         }
     }
     htmlString += "</tbody>";
