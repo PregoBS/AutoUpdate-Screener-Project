@@ -83,6 +83,10 @@ tr:hover {
     color: #159C00;
 }
 
+.dstlvl0 {
+    color: black;
+}
+
 .dstlvl1 {
     background-color: yellow;
     font-weight: bold;
