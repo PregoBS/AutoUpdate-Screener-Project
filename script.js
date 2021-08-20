@@ -15,7 +15,7 @@ function renderHTML(data, result_id, container) {
 
         if (data[i].DstLvl != null) {
             s_id = "dstlvl" + data[i].DstLvl;
-            htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td class=" + s_id + ">" + data[i].Signal + "</td><td>" + data[i].Risco + "</td><td>" + data[i].Alvo2nd + "</td></tr>";
+            htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td class=" + s_id + ">" + data[i].Signal + "</td></tr>";
         }
         else {
             htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td>" + data[i].Signal + "</td><td>" + data[i].Risco + "</td><td>" + data[i].Alvo2nd + "</td></tr>";
