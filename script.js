@@ -66,7 +66,7 @@ function init() {
 		// Parse JSON string into object
 		var actual_JSON = JSON.parse(response);
 		
-		for (i=0; i<3; i++) {
+		for (i=0; i<4; i++) {
 			let num = i+1;
 			
 			var json_file = actual_JSON[0];
@@ -74,10 +74,13 @@ function init() {
 			file1 = "Screener1a" + num.toString();
 			file2 = "Screener2a" + num.toString();
 			file3 = "Screener3a" + num.toString();
+			file4 = "Screener4a" + num.toString();
 			name1 = json_file[file1];
 			name2 = json_file[file2];
 			name3 = json_file[file3];
+			name4 = json_file[file4];
 			
+			// FIBO
 			loadJSON_urls(name1, function(response) {
 				// Parse JSON string into object
 				var actual_JSON = JSON.parse(response);
@@ -89,6 +92,7 @@ function init() {
 				renderHTML(actual_JSON, fibo_result_id, fiboContainer);
 			});
 
+			// RM
 			loadJSON_urls(name2, function(response) {
 				// Parse JSON string into object
 				var actual_JSON = JSON.parse(response);
@@ -100,6 +104,7 @@ function init() {
 				renderHTML(actual_JSON, rm_result_id, rmContainer);
 			});
 
+			// DISTORTION
 			loadJSON_urls(name3, function(response) {
 				// Parse JSON string into object
 				var actual_JSON = JSON.parse(response);
@@ -109,6 +114,18 @@ function init() {
 
 				removeOldHTML(dst_result_id);
 				renderHTML(actual_JSON, dst_result_id, dstContainer);
+			});
+
+			// ANTECIPATE
+			loadJSON_urls(name4, function(response) {
+				// Parse JSON string into object
+				var actual_JSON = JSON.parse(response);
+				var antecipate_result_id = "antecipate_result" + num.toString();
+				var antecipate_id = "antecipate" + num.toString();
+				var antecipateContainer = document.getElementById(antecipate_id);
+
+				removeOldHTML(antecipate_result_id);
+				renderHTML(actual_JSON, antecipate_result_id, antecipateContainer);
 			});
 		}
 	});
