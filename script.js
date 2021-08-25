@@ -13,12 +13,14 @@ function renderHTML(data, result_id, container) {
         var close_class = data[i].closeClass;
         var symb_class = data[i].symbolClass;
 
-        if (data[i].DstLvl != 0 && data[i].DstLvl != null) {
-            s_id = "dstlvl" + data[i].DstLvl;
-            htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td class=" + s_id + ">" + data[i].Signal + "</td></tr>";
-        }
-        else {
-            htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td>" + data[i].Signal + "</td><td>" + data[i].Risco + "</td><td>" + data[i].Alvo2nd + "</td></tr>";
+        if (data[i].Close != 0) {
+            if (data[i].DstLvl != 0 || data[i].Alvo2nd == 0) {
+                s_id = "dstlvl" + data[i].DstLvl;
+                htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td class=" + s_id + ">" + data[i].Signal + "</td></tr>";
+            }
+            else {
+                htmlString += "<tr><td class=" + symb_class + ">" + data[i].Symbol + "</td><td class=" + close_class + ">" + data[i].Close + "</td><td>" + data[i].Signal + "</td><td>" + data[i].Risco + "</td><td>" + data[i].Alvo2nd + "</td></tr>";
+            }
         }
     }
     htmlString += "</tbody>";

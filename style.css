@@ -53,18 +53,23 @@ tr:hover {
 .bloco {
     margin: 8px;
     height: 805px;
-    width: 2120px;
+    width: 1440px;
     background-color: #D2D2D2;
     border-radius: 20px;
 }
 
 .bloco_table {
-    margin: 20px;
+    margin: 15px;
     float: left;
 }
 
 .screener {
-    width: 500px;
+    width: 280px;
+    float: left;
+}
+
+.screener_large {
+    width: 380px;
     float: left;
 }
 
