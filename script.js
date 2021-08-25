@@ -70,7 +70,7 @@ function init() {
 		// Parse JSON string into object
 		var actual_JSON = JSON.parse(response);
 		
-		for (i=0; i<4; i++) {
+		for (i=0; i<3; i++) {
 			let num = i+1;
 			
 			var json_file = actual_JSON[0];
