@@ -58,9 +58,11 @@ function init() {
     let name1 = "";
     let name2 = "";
     let name3 = "";
+    let name4 = "";
 	let file1 = "";
     let file2 = "";
     let file3 = "";
+    let file4 = "";
 
 	const url_file = "json_id.json";
 	
